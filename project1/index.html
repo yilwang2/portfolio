@@ -3,81 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Every Picture</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Katibeh&family=Martel:wght@600&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Kode+Mono&family=Micro+5&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 
     <link href="styles.css" rel="stylesheet">
-
+    <script src="script.js" defer></script>
 </head>
-
-<body class="Front">
+<body>
     <nav>
-        <ul class="new">
+        <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../project2.html">Next Project</a></li>
+            <li><a href="../project2/index.html">Next Project</a></li>
         </ul>
     </nav>
     <header>
-        <h1>Blog</h1>
+        <h1>My LEGO Collection</h1>
+        <h2>Click on images to see more message</h2>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="post5.html">Web Design Research</a></li>
-            <li><a href="post4.html">Learning Web Design</a></li>
-            <li><a href="post3.html">Comparative Analysis</a></li>
-            <li><a href="post2.html">Your Article HTML</a></li>
-            <li><a href="post1.html">Internet History</a></li>
-        </ul>
-    </nav>
+    <section id="one">
+        <div class="slider">
+            <div class="a">
+                <figure>
+                    <img class="open" id="rose" src="images/rose.jpg" alt="Roses image">
+                    <span>Roses</span>
+                </figure>
+                
+                <figure>
+                    <img class="open" id="sunflower" src="images/sunflower.jpg" alt="Sunflowers image">
+                    <span>Sunflowers</span>
+                </figure>
+                
+                <figure>
+                    <img class="open" id="bouquet" src="images/bouquet.jpg" alt="Bouquet image">
+                    <span>Flower Bouquet</span>
+                </figure>
 
-    <section>
-        <article class = "card">
-            <img src="images/post5.jpeg" alt="post5 photo">
-            <h2>Blog Post 5 - Web Design Research</h2>
-            <time datetime="2023-11-21">November 21, 2023</time>
-            <p>I learned a lot of new and useful things in DES117. This new knowledge are little hard for me to apply, but I really enjoy learning it. I still have a lot to learn about website design, I will discuss my findings in this post.<a href="post5.html">Read More</a></p>
+                <figure>
+                    <img class="open" id="orchid" src="images/orchid.jpg" alt="Orchid image">
+                    <span>Orchid</span>
+                </figure>
+                <figure>
+                    <img class="open" id="night" src="images/starrynight.jpg" alt="Starry Night image">
+                    <span>The Starry Night</span>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+     <!-- overlay page for rose -->
+    <section id="ol-rose" class="overlay hidden">
+        <article>
+            <h2>Roses</h2>
+
+            <img class="roseSlides" src="images/rose.jpg" alt="Roses image0">
+            <img class="roseSlides" src="images/rose1.jpg" alt="Roses image1">
+            <img class="roseSlides" src="images/rose2.jpg" alt="Roses image2">
+            <img class="roseSlides" src="images/rose3.jpg" alt="Roses image3">
+            <button class="prev" onclick="roseplusDivs(-1)"><i class="fas fa-arrow-left"></i></button>
+            <button class="next" onclick="roseplusDivs(+1)"><i class="fas fa-arrow-right"></i></button>
+
+            <p>This LEGO set is designed with the idea of roses that won't wither, commemorating a special occasion such as Valentine's Day or Mother's Day. This LEGO set comes with 2 red flowers, green leaves, and an adjustable-length stem. This Lego is easy to assemble without a lot of small parts and doesn't take long.</p>
+            <button class="corner close">&otimes;</button>
         </article>
+    </section>
 
-        <article class = "card">
-            <img src="images/post4.jpeg" alt="post4 photo">
-            <h2>Blog Post 4 - Learning Web Design</h2>
-            <time datetime="2023-11-13">November 13, 2023</time>
-            <p>After reading chapters 14, 15, 16, and 17 of Learning Web Design, I have learned more about the use of CSS to enrich the elements of a web page, what I tried was the box drop shadows in Chapter 14, "Thinking Inside the Box" (in page 382 & 383).<a href="post4.html">Read More</a></p>
+    <!-- overlay page for sunflower -->
+    <section id="ol-sunflower" class="overlay hidden">
+        <article>
+            <h2>Sunflowers</h2>
+
+            <img class="sunSlides" src="images/sunflower.jpg" alt="Sunflowers image">
+            <img class="sunSlides" src="images/sunflower1.jpg" alt="Sunflowers image 1">
+            <img class="sunSlides" src="images/sunflower2.jpg" alt="Sunflowers image 2">
+            <img class="sunSlides" src="images/sunflower3.jpg" alt="Sunflowers image 3">
+            <button class="prev" onclick="sunplusDivs(-1)"><i class="fas fa-arrow-left"></i></button>
+            <button class="next" onclick="sunplusDivs(+1)"><i class="fas fa-arrow-right"></i></button>
+
+            <p>This LEGO set is designed with the idea that sunflowers bring happy emotions and warmth to their surroundings, and the bright yellow color will brighten the mood. Included in this LEGO set are 2 sunflower flowers with adjustable green stems and leaves. This LEGO is easy to put together, except that many small petals require patience to mount on, but it doesn't take a lot of time.</p>
+            <button class="corner close">&otimes;</button>
         </article>
+    </section>
 
-        <article class = "card">
-            <img src="images/post3.jpeg" alt="post3 photo">
-            <h2>Blog Post 3 - Comparative Analysis</h2>
-            <time datetime="2023-11-03">November 3, 2023</time>
-            <p>The topic I chose for my interactive narrative project is a portfolio website and I thought it would be cool to make my own website where I can showcase my work. I found some designs of portfolio websites that gave me some inspiration.<a href="post3.html">Read More</a></p>
+    <!-- overlay page for Bouquet -->
+    <section id="ol-bouquet" class="overlay hidden">
+        <article>
+            <h2>Flower Bouquet</h2>
+
+            <img class="bouqSlides" src="images/bouquet.jpg" alt="bouquet image">
+            <img class="bouqSlides" src="images/bouquet1.jpg" alt="bouquet image 1">
+            <img class="bouqSlides" src="images/bouquet2.jpg" alt="bouquet image 2">
+            <img class="bouqSlides" src="images/bouquet3.jpg" alt="bouquet image 3">
+            <img class="bouqSlides" src="images/bouquet4.jpg" alt="bouquet image 4">
+            <button class="prev" onclick="bouqplusDivs(-1)"><i class="fas fa-arrow-left"></i></button>
+            <button class="next" onclick="bouqplusDivs(+1)"><i class="fas fa-arrow-right"></i></button>
+
+            <p>The idea behind the design of this LEGO is that different types of flowers come together in beautiful bouquets by matching shapes and colors. There are 5 stems included in this LEGO set with a mix of flower and leaf varieties. It takes some time to put this LEGO set together as there are many different flowers, each one is put together differently and some have more petals. Although it takes time to put this bouquet together, the process of putting it together is very fun, and seeing one flower completed and then paired together is like pruning and arranging flowers.</p>
+            <button class="corner close">&otimes;</button>
         </article>
+    </section>
 
-        <article class = "card">
-            <img src="images/post2.jpeg" alt="post2 photo">
-            <h2>Blog Post 2 - Your Article HTML</h2>
-            <time datetime="2023-10-25">October 25, 2023</time>
-            <p>About my understanding of semantic HTML and how to incorporate it into my article.<a href="post2.html">Read More</a></p>
+    <!-- overlay page for Orchid -->
+    <section id="ol-orchid" class="overlay hidden">
+        <article>
+            <h2>Orchid</h2>
+
+            <img class="orcSlides" src="images/orchid.jpg" alt="Orchid image">
+            <img class="orcSlides" src="images/orchid1.jpg" alt="Orchid image 1">
+            <img class="orcSlides" src="images/orchid2.jpg" alt="Orchid image 2">
+            <img class="orcSlides" src="images/orchid3.jpg" alt="Orchid image 3">
+            <button class="prev" onclick="orcplusDivs(-1)"><i class="fas fa-arrow-left"></i></button>
+            <button class="next" onclick="orcplusDivs(+1)"><i class="fas fa-arrow-right"></i></button>
+
+            <p>This LEGO design can be used to create an elegant orchid ornament for the home or office, inspired by real orchids. The finished product of this LEGO is a larger ornament, just like a real orchid pot plant. There aren't a lot of small parts in this LEGO, but there are many parts that need to be completed, such as the pot, leaves, stem, and flower parts, which will also take some time.</p>
+            <button class="corner close">&otimes;</button>
         </article>
+    </section>
 
-        <article class = "card">
-            <img src="images/post1.jpeg" alt="post1 photo">
-            <h2>Blog Post 1 - Internet History</h2>
-            <time datetime="2023-10-19">October 19, 2023</time>
-            <p>This includes the research and discussion about the question of “How to balance between the access to internet content and the leakage of our personal information?“<a href="post1.html">Read More</a></p>
+    <!-- overlay page for Starry Night -->
+    <section id="ol-night" class="overlay hidden">
+        <article>
+            <h2>The Starry Night</h2>
+
+            <img class="starSlides" src="images/starrynight.jpg" alt="Starry Night image">
+            <img class="starSlides" src="images/starrynight1.jpg" alt="Starry Night image 1">
+            <img class="starSlides" src="images/starrynight2.jpg" alt="Starry Night image 2">
+            <img class="starSlides" src="images/starrynight3.jpg" alt="Starry Night image 3">
+            <img class="starSlides" src="images/starrynight4.jpg" alt="Starry Night image 4">
+            <button class="prev" onclick="starplusDivs(-1)"><i class="fas fa-arrow-left"></i></button>
+            <button class="next" onclick="starplusDivs(+1)"><i class="fas fa-arrow-right"></i></button>
+
+            <p>The design of this LEGO is based on Van Gogh's Starry Night painting. The finished product of this LEGO is a three-dimensional painting of the starry sky, which is a beautiful three-dimensional design and is perfect for decorating your home. This LEGO takes a lot of time to put together, so you can choose to put it together with a friend. First of all, there are a lot of parts, there are also a lot of small parts, and some of the colors of the parts are also very similar, you need to carefully check the drawings to put them together. But I enjoy the process of putting together LEGO so I don't find it boring, I did it with my boyfriend and felt a sense of accomplishment when I finished.</p>
+            <button class="corner close">&otimes;</button>
         </article>
     </section>
 
     <footer>
-		<p>Yilan Wang</p>
-		<address>
-            contact: <a href="mailto:&#121;&#108;&#119;&#097;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">&#121;&#108;&#119;&#097;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;</a>
+        <p>Designed by Yilan Wang</p>
+        <address>
+            Contact Me: <a href="mailto:&#121;&#108;&#119;&#097;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">&#121;&#108;&#119;&#097;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;</a>
         </address>
-	</footer>
-
+    </footer>
 </body>
 </html>
